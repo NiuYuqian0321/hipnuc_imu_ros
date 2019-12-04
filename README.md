@@ -3,9 +3,9 @@ hipnuc_imu_ros
 
 Description
 ----
-A ROS wrapper for HiPNUC HI216 IMU Device.
+A ROS wrapper for HiPNUC HI226 IMU Device.
 
-The HiPNUC HI216 is a 6 DoF (Degree of Freedom) IMU device which consists of 2 sensors: gyro and acceleration sensor.
+The HiPNUC HI226 is a 6 DoF (Degree of Freedom) IMU device which consists of 2 sensors: gyro and acceleration sensor.
 More information about this sensor can be found in the official `HiPNUC` website: [http://www.hipnuc.com](http://www.hipnuc.com/).
 
 Install Linux Driver for HiPNUC HI216
@@ -55,15 +55,12 @@ Configure ROS Package
 
 ``` bash
 $ cd ~/catkin_ws
-$ catkin_make -DCATKIN_WHITELIST_PACKAGES="hipnuc_imu_ros" -j1
+$ catkin_make
 ``` 
 
-2. Connect HI216 device via a USB cable, then test the device according to the following commands :
+2. Connect HI226 device via a USB cable, then test the device according to the following commands :
 ``` bash
-#The 1st terminal:
-$ roscore
-#The 2nd terminal:
-$ roslaunch hipnuc_imu_ros imu.launch
+$ roslaunch imu_publish imu.launch
 ```
 
 Now you should see the received IMU data in the terminal. Enjoy!
